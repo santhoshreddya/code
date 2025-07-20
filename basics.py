@@ -12,7 +12,7 @@ student_name= "santhosh"
 print(type(student_name))
 #seeing address of variables 
 
-a=b=c= "santhosh"
+a=b=c= "santhoshreddy"
 print(id(a))
 print(id(b))
 print(id(c))
