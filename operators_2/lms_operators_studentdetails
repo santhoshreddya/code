@@ -1,0 +1,15 @@
+Student_ID = 1499
+Student_Name ="santhosh"
+Student_Age =21
+Quiz_Score= 75
+Assignment_Score=80
+Exam_score=75
+Student_Attendance=90
+totalscore=(Quiz_Score+Assignment_Score+Exam_score)
+avgscore=(totalscore)/3
+Student_Attendance+=1
+passed=avgscore>=75 and Student_Attendance>=90
+print(passed)
+print(f"student_id is {Student_ID} and his name is {Student_Name} age is {Student_Age}")
+print(f"his total marks is {totalscore} and his average marks is {avgscore} his attendance is {Student_Attendance}")
+print(f"he awarded degree if he perform in score and attendance {passed}")

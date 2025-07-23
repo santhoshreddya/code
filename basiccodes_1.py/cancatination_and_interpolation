@@ -1,0 +1,6 @@
+name="santhosh"
+place="siddipet"
+age=21
+new_age=22
+print(name + place)  #cancatination
+print(f"his name is {name} and he from {place} his age is {age + new_age}")
