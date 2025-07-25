@@ -1,0 +1,13 @@
+poultry=int(input("enter shed capacity"))
+if poultry>25000:
+    print(f"your shed {poultry} is big")
+#elif poultry>20000 and poultry<=25000 :
+elif 20000 < poultry<=25000:
+    print(f"your shed {poultry} is medium")
+elif 10000<=poultry<=20000 :
+    print(f"your shed {poultry} is normal")
+else:
+    print("small poultry shed")
+
+
+
