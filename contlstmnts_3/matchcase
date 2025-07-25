@@ -1,0 +1,12 @@
+age = int(input("enter your age"))
+match age:
+    case 1 | 2 | 3 | 4 | 5:
+     category="baby"
+    case 6 | 7 | 8 | 9 | 10:
+     category = "child" 
+    case 11 | 12 | 13 | 14 | 15:
+     category = "growing"
+    case _ :
+     category= "big"
+print(category)
+
