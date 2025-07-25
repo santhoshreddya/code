@@ -1,0 +1,16 @@
+#implicit conversion type conversion
+a=1
+b=22.5
+c=a+b
+print(c)
+print(type(c))
+#explicit conversion type casting 
+d=10
+e=2.8
+f=d+e
+g=int(f)
+print(type(f))
+print(type(g))
+print(g)
+
+
