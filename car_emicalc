@@ -1,0 +1,13 @@
+on_roadprice=int(input("enter on road price of car"))
+down_payment=int(input("enter down payment of car"))
+loan_amount=on_roadprice-down_payment
+bank_intrestrate=int(input("bank intrest rate"))
+loan_years=int(input("enter loan years"))
+monthly_rate=bank_intrestrate/12/100
+loan_months=loan_years*12
+emi=(loan_amount*monthly_rate*(1+monthly_rate)**loan_months)/((1+monthly_rate)**loan_months-1)
+print(f"montly emi is {emi}")
+
+
+
+
