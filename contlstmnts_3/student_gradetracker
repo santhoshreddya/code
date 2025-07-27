@@ -1,0 +1,39 @@
+student_id=input("enter student_id ")
+student_name=input("enter student_name ")
+Attendance=int(input("enter Attendance "))
+scores=[]
+subject_count=1
+while True:
+    marks=int(input(f"enter subject{subject_count} marks "))
+    next_subject=input("do you want to continue for next subject(yes/no) ").lower()
+    scores.append(marks)
+    if next_subject!="yes":
+        total_score=sum(scores)
+        average_score=total_score/len(scores)
+        break
+    subject_count+=1
+if average_score>=85:
+    performance = "excellent"
+elif 70<average_score<84:
+    performance = "good"
+elif 50<average_score<69:
+    performance=  "average"
+else :
+    performance= "need improvement"
+if Attendance<75:
+    print(f"warning low attendance {Attendance}")
+else:
+    print(f" student attedance {Attendance} is satisfied")
+print(f"student id is  {student_id}")    
+print(f"student name is  {student_name}")    
+print(f"student performance is  {performance}") 
+print(f"student attedance is  {Attendance}")    
+print(f"student_total score is  {total_score}")   
+print(f"student_avg score is  {average_score}")
+
+
+
+
+
+
+
