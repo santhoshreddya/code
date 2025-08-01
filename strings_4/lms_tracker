@@ -1,0 +1,64 @@
+print("="*30)
+print("lms student grade tracker using string operations")
+print("="*30)
+valid_studentid=False
+while not valid_studentid:
+    student_id=(input("enter student id "))
+    if student_id.startswith("-") and student_id[1:].isdigit():
+      print("enter positive numbers")
+    elif student_id.isdigit() and int(student_id)==0:
+       print("id should not zero ")
+    elif student_id.isdigit():
+       student_id=student_id.zfill(5)
+       id_format="STU"+student_id
+       print(f"student id is {id_format}")
+       valid_studentid=True
+       
+       
+    else:
+       print("enter numeric numbers only")
+student_namevalid=False
+while not student_namevalid:
+   student_name=input("enter student name ")
+   student_name=(student_name).strip().title()
+   nickname=student_name.replace(" ","")
+   
+   if nickname.isalpha()and len(student_name)>=3:
+      print(f"student name is = {student_name}")
+      student_namevalid=True
+   elif nickname.isalpha()and len(student_name)<3:
+      print("student name min 3 characters") 
+   else:
+    print("enter alphabets")
+name=student_name.split()
+firstname=name[0].lower()
+email=firstname+"."+student_id+"@university.edu"
+print(f"email is {email}")
+
+valid_basecoursefee=False
+while not valid_basecoursefee:
+    basefee=(input("enter base couse fee "))
+    if basefee.startswith("-") and basefee[1:].isdigit():
+      print("enter positive numbers")
+    elif basefee.isdigit() and int(basefee)==0:
+       print("fee should not zero ")
+    elif basefee.isdigit():
+       basefee=int(basefee)
+       print(f"base course fee is {basefee}")
+       valid_basecoursefee=True
+       
+       
+    else:
+       print("enter numeric numbers only")
+discount=0
+description=input("enter your description ")
+if description.find("referance")!=-1:
+   discount+=5000         
+elif "scholarship" in description:
+   discount+=7000
+elif "promo" in description:
+   discount+=3000  
+else:
+   discount=0
+final_fee=basefee-discount
+print(f"final fee after {discount} discount is {final_fee}")
