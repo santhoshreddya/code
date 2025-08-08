@@ -90,6 +90,6 @@ print(numbs)
 numbs.setdefault(1,100)
 print(numbs)
 #for duplicates it allows but if key is presnt it updates key values
-numbs={1:10,2:20,3:30,4:40,1:100}
+numbs={1:10,2:20,3:30,4:40,1:1000}
 print(numbs)
 
