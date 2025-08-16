@@ -1,0 +1,101 @@
+print("="*55)
+system_info=("LMS Students Portal","v1.0","2025","Edify University")
+contact_info=("santhoshreddya5553@gmail.com","9666565553","143")
+print(f"welcome {system_info[0]} institute is {system_info[3]}")
+print("="*55)
+student={}
+while True:
+    print("enter choice 1 for add student")
+    print("enter choice 2 for modify student")
+    print("enter choice 3 for delete student")
+    print("enter choice 4 for list students")
+    print("enter choice 5 for exit student")
+    choice=input("enter ur choice to choose :")
+    if choice =="1":
+        print("performing operation 1")
+        studentid=input("enter student id")
+        if studentid in student:
+            print("these id already exists")
+        else:
+            name=input("enter student name :").title()
+            score=[]
+            while True:
+             scores=input("enter scores if enough enter done :")
+             if scores=="done":
+                 break
+             
+             if scores.isdigit():
+               scoress=int(scores)
+               if  0<=  scoress <=100:
+                 
+                     score.append(scoress)
+               else:
+                     print("enter scores between 0-100 only")
+             else:
+                 print("enter digits only")
+            
+            skills=set()
+            while True:
+             skill=input("enter skills enough enter done : ")
+             if skill=="done":
+              break
+             else:
+                 skills.add(skill.strip().title())
+            student[studentid]={"name":name,"score":score,"skills":skills}
+            print(student)
+   
+    elif choice =="2":
+        print("performing operation 2")  
+        key=input("enter key to modify") 
+        
+        if key in student:
+            modified_name=input("enter new name to modify") 
+            student[key]["name"]=modified_name.title()
+            print("modifed succefuly")
+        else:
+            print("enter correct key which is already exists")
+            
+        print(student)
+
+    elif choice =="3":
+        print("performing operation 3")
+        key=input("enter key to delete") 
+        if key in student:
+            student.pop(key)
+            print("deleted succefuly")
+        else:
+            print("enter correct key which is already exists")
+        
+        print(student)
+
+    elif choice =="4":
+
+        print("performing operation 4")
+        if student:
+           print("="*55)
+           print("listing all student details ")
+           print("="*55)
+           for sid,data in student.items():
+               name=data["name"]
+               
+               score=data["score"]
+               skills=data["skills"]
+               if score:
+                   avg=sum(score)/len(score)
+                   top_score=max(score)
+               else:
+                   avg=0
+               
+                   top_score=0
+                   
+                
+               print(f"avg score is {avg}") 
+               print(f"top score is :{top_score}")      
+               print(f"skills are :{skills}")
+    elif choice =="5":
+        print("performing operation 5")
+        print(f"contact details are {contact_info[0], contact_info[1]}  ")
+        break
+    else:
+        print("enter choices between 1-5")
+
