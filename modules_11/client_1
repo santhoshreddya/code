@@ -1,0 +1,6 @@
+import my_module
+name="edu"
+email="edu@gmail.com"
+print(my_module.email)
+print(my_module.add(10,20))
+print(my_module.profinfo(email="santhu@gmailcom",name="santhu"))

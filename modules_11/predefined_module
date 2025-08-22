@@ -1,0 +1,8 @@
+#in predifined module the module is already  present like math
+import math
+print(math.sqrt(25))
+from math import sqrt
+print(sqrt(25))
+#keep alias name for easy access
+import math as m
+print(m.sqrt(25))

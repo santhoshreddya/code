@@ -1,0 +1,3 @@
+from my_module import name #name conflict is there
+from my_module2 import name
+print(name)

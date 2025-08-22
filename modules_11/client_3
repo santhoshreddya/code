@@ -1,0 +1,5 @@
+#if client wants both name if name conflict
+import my_module
+import my_module2
+print(my_module.name)
+print(my_module2.name)
