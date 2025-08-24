@@ -1,0 +1,11 @@
+#client wants no of users
+#client wants users age below 30 their names
+import json
+with open("json_dummy.json","r") as newfile:
+    read=json.load(newfile)
+    #print(read)
+    #print(len(read["users"]))
+    for i in read['users']:
+        if i['age']<30:
+            print(i["username"],i["age"])
+        #print(i)
