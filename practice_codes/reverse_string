@@ -1,0 +1,3 @@
+def reverse(n):
+  return n[::-1]
+print(reverse("hello"))
