@@ -1,0 +1,7 @@
+#lcm and gcd
+import math
+a=int(input("enter 1st num"))
+b=int(input("enter 2nd numb"))
+gcd=math.gcd(a,b)
+lcm=(a*b)//gcd
+print("lcm is " , lcm, "gcd is " ,gcd)

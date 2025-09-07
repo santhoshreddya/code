@@ -1,0 +1,13 @@
+#prime number checking using root n optimization
+def primenum(n):
+    if n<2:
+        return False
+    else:
+        list=int(n**0.5)+1
+        for i in range(2,list):
+            if n%i ==0:
+                return False
+            else:
+                return True
+print(primenum(7))            
+

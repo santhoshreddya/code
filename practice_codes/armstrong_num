@@ -1,0 +1,14 @@
+#now we going with armstrng num sum of power of each digit to same num
+n=int(input("enter armstrong num"))
+temp=n
+sum=0
+leng=len(str(n))
+while temp>0:
+    lastdigit=temp%10 #gives last  digit
+    sum+=lastdigit**leng
+    temp//=10  #removes last digt
+if n==sum:
+ print("armstrong num")
+else:
+   print("not armstrong num")
+

@@ -1,0 +1,13 @@
+# counting vowels and consonents in given string
+sen=input("enter string :").lower()
+vowel_count=0
+consonent_count=0
+vowels="aeiou"
+for char in sen:
+    if char.isalpha():
+        if char in vowels:
+            vowel_count+=1
+        else:
+            consonent_count+=1
+print("vowels are ",vowel_count)
+print("consonents are ",consonent_count)
